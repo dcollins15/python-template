@@ -22,6 +22,7 @@ flake8 = "*"
 isort = "*"
 pre-commit = "*"
 pyright = "*"
+pytest = "*"
 
 [tool.pixi.pypi-dependencies]
 package-name = { path = ".", editable = true }
@@ -33,6 +34,7 @@ pre-commit = "pre-commit run --all --show-diff-on-failure"
 flake8 = "flake8 src/ tests/"
 pyright = "pyright src/ tests/"
 pre-merge = { depends-on = ["isort", "black", "flake8", "pyright"] }
+pytest = "pytest tests/"
 
 [tool.isort]
 profile = "black"
