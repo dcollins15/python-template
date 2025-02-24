@@ -18,8 +18,10 @@ platforms = ["win-64", "linux-64", "osx-arm64"]
 [tool.pixi.dependencies]
 python = ">=3.13"
 black = "*"
+flake8 = "*"
 isort = "*"
 pre-commit = "*"
+pyright = "*"
 
 [tool.pixi.pypi-dependencies]
 package-name = { path = ".", editable = true }
@@ -28,6 +30,9 @@ package-name = { path = ".", editable = true }
 isort = "isort src/ tests/"
 black = "black src/ tests/"
 pre-commit = "pre-commit run --all --show-diff-on-failure"
+flake8 = "flake8 src/ tests/"
+pyright = "pyright src/ tests/"
+pre-merge = { depends-on = ["isort", "black", "flake8", "pyright"] }
 
 [tool.isort]
 profile = "black"
