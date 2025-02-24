@@ -20,6 +20,8 @@ python = ">=3.13"
 black = "*"
 flake8 = "*"
 isort = "*"
+jupyterlab = "*"
+jupytext = "*"
 pre-commit = "*"
 pyright = "*"
 pytest = "*"
@@ -35,6 +37,7 @@ flake8 = "flake8 src/ tests/"
 pyright = "pyright src/ tests/"
 pre-merge = { depends-on = ["isort", "black", "flake8", "pyright"] }
 pytest = "pytest tests/"
+jupyter = "jupyter lab"
 
 [tool.isort]
 profile = "black"
