@@ -80,6 +80,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.pixi/
 
 # mkdocs documentation
 /site
