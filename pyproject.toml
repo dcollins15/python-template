@@ -17,6 +17,13 @@ platforms = ["win-64", "linux-64", "osx-arm64"]
 
 [tool.pixi.dependencies]
 python = ">=3.13"
+black = "*"
+isort = "*"
+pre-commit = "*"
 
 [tool.pixi.pypi-dependencies]
 package-name = { path = ".", editable = true }
+
+[tool.isort]
+profile = "black"
+float_to_top = "True"
